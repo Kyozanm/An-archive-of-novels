@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AN ARCHIVE OF NOVELS</title>
+  <style>
+    body {
+      background: #0b0b0b;
+      color: #e8e8e8;
+      font-family: Georgia, serif;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      letter-spacing: 4px;
+    }
+
+    p {
+      color: #888;
+      font-style: italic;
+    }
+
+    input {
+      background: transparent;
+      border: 1px solid #555;
+      padding: 12px;
+      color: white;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      background: #e8e8e8;
+      border: none;
+      padding: 12px 18px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    #error {
+      color: #777;
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>AN ARCHIVE OF NOVELS</h1>
+
+  <p>You weren't supposed to find this.</p>
+
+  <input id="password" type="password" placeholder="ACCESS CODE">
+  <button onclick="enter()">ENTER</button>
+
+  <p id="error">Access denied.</p>
+
+  <script>
+    function enter() {
+      const password = document.getElementById("password").value;
+
+      if (password === "YOURCODE") {
+        window.location.href = "archive.html";
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
